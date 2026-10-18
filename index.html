@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project 2 Report - Persuasive or Deceptive Visualization?</title>
+        <style>
+            :root {
+                --color-neutral-95: hsl(220 10% 95%);
+                --color-neutral-90: hsl(220 10% 90%);
+                --color-neutral-80: hsl(220 10% 80%);
+                --color-neutral-70: hsl(220 10% 70%);
+                --color-neutral-60: hsl(220 10% 60%);
+                --color-neutral-50: hsl(220 10% 50%);
+                --color-neutral-40: hsl(220 10% 40%);
+                --color-neutral-30: hsl(220 10% 30%);
+                --color-neutral-20: hsl(220 10% 20%);
+                --color-neutral-10: hsl(220 10% 10%);
+                --score-earnest: #2e7d32;
+                --score-deceptive: #c62828;
+                --score-neutral: #e65100;
+            }
+
+            html {
+                font: 100%/1.5 system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+                counter-reset: figure;
+                background: var(--color-neutral-95);
+                max-width: min(75vw, 80em);
+                margin: 0 auto;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                line-height: 1.1;
+                font-weight: 600;
+                text-wrap: balance;
+            }
+
+            h1, h2 {
+                border-bottom: 1px solid var(--color-neutral-80);
+                padding-bottom: 0.2em;
+            }
+
+            h1 {
+                margin-block: 1em 0.5rem;
+                font-size: clamp(2em, 150% + 2vh + 2vw, 4vmin);
+                font-weight: 800;
+                text-align: center;
+
+                small {
+                    display: block;
+                    width: fit-content;
+                    padding: 0.2em 0.5em;
+                    margin-inline: auto;
+                    color: white;
+                    background: var(--color-neutral-40);
+                    font-size: 40%;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                    border-radius: 4px;
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            h2 {
+                font-size: 160%;
+                color: var(--color-neutral-30);
+                margin-top: 2rem;
+            }
+
+            h3 {
+                font-size: 130%;
+                color: var(--color-neutral-40);
+            }
+
+            ul, ol {
+                padding-inline-start: 2em;
+            }
+
+            li + li {
+                margin-top: 0.75em;
+            }
+
+            header {
+                padding-block: 1em;
+                text-align: center;
+            }
+
+            main {
+                background: white;
+                color: var(--color-neutral-20);
+                border-radius: 1rem;
+                padding: 1.5rem 2.5rem;
+                margin-bottom: 3rem;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
+
+            figure {
+                margin: 1.5em 0;
+                padding: 0.5rem;
+                border: 1px solid var(--color-neutral-80);
+                box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+                text-align: center;
+                background: white;
+                border-radius: 6px;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 4px;
+                }
+
+                > figcaption {
+                    font: 500 85% system-ui;
+                    background: var(--color-neutral-95);
+                    padding: 0.6rem 0.8rem;
+                    margin: 0.5rem -0.5rem -0.5rem -0.5rem;
+                    counter-increment: figure;
+                    text-align: left;
+                    border-top: 1px solid var(--color-neutral-80);
+
+                    &::before {
+                        content: "Figure " counter(figure) ": ";
+                        font-weight: bold;
+                        color: var(--color-neutral-40);
+                    }
+                }
+            }
+
+            .score {
+                display: inline-block;
+                padding: 0.1em 0.4em;
+                border-radius: 4px;
+                font-weight: bold;
+                font-size: 0.9em;
+            }
+            .score-earnest { background: #e8f5e9; color: var(--score-earnest); }
+            .score-deceptive { background: #ffebee; color: var(--score-deceptive); }
+            .score-neutral { background: #fff3e0; color: var(--score-neutral); }
+            
+            .data-sources {
+                font-size: 0.9em;
+                background: var(--color-neutral-95);
+                padding: 1rem;
+                border-radius: 6px;
+                margin-top: 2rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <small>DSC 106 &bull; Project 2</small>
+                Persuasive or Deceptive Visualization?
+            </h1>
+
+            <!-- TODO: Add all teammates' names and UCSD emails below -->
+            <p>
+                <strong>Will Shin</strong> (<em>hosoos@gmail.com</em>) &bull;
+                <strong>Teammate 2</strong> (<em>email2@ucsd.edu</em>) &bull;
+                <strong>Teammate 3</strong> (<em>email3@ucsd.edu</em>)
+            </p>
+        </header>
+
+        <main>
+            <h2>Proposition: Environmental Spending Helps Reduce Carbon Emissions</h2>
+
+            <!-- SECTION 1: FOR -->
+            <section>
+                <h3>FOR the Proposition</h3>
+
+                <figure>
+                    <!-- Export your page 1 charts as an image (e.g., images/proposition1.png) -->
+                    <img src="images/proposition1.png" alt="Visualizations demonstrating decline in emissions among countries with environmental spending" />
+                    <figcaption>
+                        Production-based CO₂ emission declines in countries with active environmental protection spending (1995–2018).
+                    </figcaption>
+                </figure>
+
+                <p><strong>Design Decisions and Rationale:</strong></p>
+
+                <ul>
+                    <li>
+                        <strong>Cherry-Picking High-Performing European Nations</strong>
+                        <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> We isolated 12 nations (e.g., Romania, Sweden, UK, Bulgaria) that achieved steep reductions in production-based CO₂ while increasing environmental spending. By excluding countries where emissions rose in tandem with GDP and spending, this gives readers an overwhelming impression of widespread policy success.
+                    </li>
+                    <li>
+                        <strong>Strategic Time-Window Baseline Selection (2007 vs 1995)</strong>
+                        <span class="score score-deceptive">Score: -1.0 (Deceptive)</span><br>
+                        <em>Rationale:</em> Shifting the observational baseline to 2007 for the secondary chart allowed us to claim that "36 of 67 countries cut domestic emissions," capturing post-2008 global financial crisis emission dips that were largely macroeconomic rather than spending-driven.
+                    </li>
+                    <li>
+                        <strong>Prominent Headline Framing and Sorting by Magnitude</strong>
+                        <span class="score score-earnest">Score: +1.5 (Earnest)</span><br>
+                        <em>Rationale:</em> We sorted horizontal bars in descending order of percent reduction and annotated the highest reducer (-38.6% for Romania) directly in the chart title. This visually guides the eye quickly and reinforces readability without distorting the underlying bar lengths.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SECTION 2: AGAINST -->
+            <section>
+                <h3>AGAINST the Proposition</h3>
+
+                <figure>
+                    <!-- Export your page 2 charts as an image (e.g., images/proposition2.png) -->
+                    <img src="images/proposition2.png" alt="Visualizations demonstrating rise in global emissions despite spending" />
+                    <figcaption>
+                        Total indexed emissions growth and geographic emission expansions (1995–2018).
+                    </figcaption>
+                </figure>
+
+                <p><strong>Design Decisions and Rationale:</strong></p>
+
+                <ul>
+                    <li>
+                        <strong>Aggregate Indexing Starting at 100 Baseline</strong>
+                        <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> In the line chart, we combined production-based CO₂ across all 67 countries into a single aggregate index relative to 1995 = 100. This single aggregate curve rose +57.4%, which completely conceals the genuine reductions achieved by over 25 individual nations by allowing massive emission growth in high-population developing nations to dominate the scale.
+                    </li>
+                    <li>
+                        <strong>Filtering Exclusively for Developing Countries with Rising Emissions</strong>
+                        <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> In the horizontal bar chart, we highlighted countries where spending and emissions both increased (e.g., Myanmar, Kazakhstan, Chile, Argentina). Developing economies naturally produce more emissions as they industrialize, so presenting their spending as "ineffective" conflates developmental growth with policy failure.
+                    </li>
+                    <li>
+                        <strong>Choropleth Color Saturation Contrast (1995 vs 2018)</strong>
+                        <span class="score score-earnest">Score: +1.0 (Earnest)</span><br>
+                        <em>Rationale:</em> The side-by-side choropleth maps visualize absolute emission scales globally. Using high contrast and saturated dark reds for heavy emitters draws attention to how domestic reductions in Western nations are overshadowed by shifts in global industrial production.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SECTION 3: FINAL REFLECTION -->
+            <section>
+                <h2>Final Reflection</h2>
+
+                <p>
+                    Throughout this project, exploring the relationship between environmental protection spending and CO₂ emissions revealed how strongly visualization choices dictate the reader's takeaways. Neither visualization fabricated false data points—both were computed strictly from the International Monetary Fund's (IMF) Climate Change Indicators database. Yet, depending on whether data was presented at an individual country level or aggregated as a global index, the narrative swung from successful environmental stewardship to total policy futility.
+                </p>
+                <p>
+                    What was most surprising was the ease with which earnest techniques (accurate bar lengths, labeled axes, clear titles) can be combined with deceptive aggregation and filtering to construct compelling opposing arguments. We define ethical visualization not merely as avoiding factual falsification, but as actively striving for proportional representation. When a subset of data is isolated to support a proposition, ethical visualizers should provide context regarding the overall distribution so readers are not misled by omission.
+                </p>
+            </section>
+
+            <div class="data-sources">
+                <strong>Data Sources:</strong>
+                <ul>
+                    <li><a href="https://data.imf.org/en/Data-Explorer?datasetUrn=IMF.STA:GENENVPROEXP(1.0.2)" target="_blank">IMF General Environmental Protection Expenditure</a></li>
+                    <li><a href="https://data.imf.org/en/datasets/IMF.STA:CO2E" target="_blank">IMF CO2 Emissions Embodied in Production and Final Demand</a></li>
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>
