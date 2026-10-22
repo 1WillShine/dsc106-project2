@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project 2 Report - Persuasive or Deceptive Visualization?</title>
+        <style>
+            :root {
+                --color-neutral-95: hsl(220 10% 95%);
+                --color-neutral-90: hsl(220 10% 90%);
+                --color-neutral-80: hsl(220 10% 80%);
+                --color-neutral-70: hsl(220 10% 70%);
+                --color-neutral-60: hsl(220 10% 60%);
+                --color-neutral-50: hsl(220 10% 50%);
+                --color-neutral-40: hsl(220 10% 40%);
+                --color-neutral-30: hsl(220 10% 30%);
+                --color-neutral-20: hsl(220 10% 20%);
+                --color-neutral-10: hsl(220 10% 10%);
+                --score-earnest: #2e7d32;
+                --score-deceptive: #c62828;
+                --score-neutral: #e65100;
+            }
+
+            html {
+                font: 100%/1.5 system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+                counter-reset: figure;
+                background: var(--color-neutral-95);
+                max-width: min(75vw, 80em);
+                margin: 0 auto;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                line-height: 1.1;
+                font-weight: 600;
+                text-wrap: balance;
+            }
+
+            h1, h2 {
+                border-bottom: 1px solid var(--color-neutral-80);
+                padding-bottom: 0.2em;
+            }
+
+            h1 {
+                margin-block: 1em 0.5rem;
+                font-size: clamp(2em, 150% + 2vh + 2vw, 4vmin);
+                font-weight: 800;
+                text-align: center;
+
+                small {
+                    display: block;
+                    width: fit-content;
+                    padding: 0.2em 0.5em;
+                    margin-inline: auto;
+                    color: white;
+                    background: var(--color-neutral-40);
+                    font-size: 40%;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                    border-radius: 4px;
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            h2 {
+                font-size: 160%;
+                color: var(--color-neutral-30);
+                margin-top: 2rem;
+            }
+
+            h3 {
+                font-size: 130%;
+                color: var(--color-neutral-40);
+            }
+
+            ul, ol {
+                padding-inline-start: 2em;
+            }
+
+            li + li {
+                margin-top: 0.75em;
+            }
+
+            header {
+                padding-block: 1em;
+                text-align: center;
+            }
+
+            main {
+                background: white;
+                color: var(--color-neutral-20);
+                border-radius: 1rem;
+                padding: 1.5rem 2.5rem;
+                margin-bottom: 3rem;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
+
+            figure {
+                margin: 1.5em 0;
+                padding: 0.5rem;
+                border: 1px solid var(--color-neutral-80);
+                box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+                text-align: center;
+                background: white;
+                border-radius: 6px;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 4px;
+                }
+
+                > figcaption {
+                    font: 500 85% system-ui;
+                    background: var(--color-neutral-95);
+                    padding: 0.6rem 0.8rem;
+                    margin: 0.5rem -0.5rem -0.5rem -0.5rem;
+                    counter-increment: figure;
+                    text-align: left;
+                    border-top: 1px solid var(--color-neutral-80);
+
+                    &::before {
+                        content: "Figure " counter(figure) ": ";
+                        font-weight: bold;
+                        color: var(--color-neutral-40);
+                    }
+                }
+            }
+
+            .score {
+                display: inline-block;
+                padding: 0.1em 0.4em;
+                border-radius: 4px;
+                font-weight: bold;
+                font-size: 0.9em;
+            }
+            .score-earnest { background: #e8f5e9; color: var(--score-earnest); }
+            .score-deceptive { background: #ffebee; color: var(--score-deceptive); }
+            .score-neutral { background: #fff3e0; color: var(--score-neutral); }
+            
+            .data-sources {
+                font-size: 0.9em;
+                background: var(--color-neutral-95);
+                padding: 1rem;
+                border-radius: 6px;
+                margin-top: 2rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <small>DSC 106 &bull; Project 2</small>
+                Persuasive or Deceptive Visualization?
+            </h1>
+
+            <!-- TODO: Add all teammates' names and UCSD emails below -->
+            <p>
+                <strong>Will Shin</strong> (<em>wishin@gmail.com</em>) &bull;
+                <strong>Teammate </strong> (<em>email@ucsd.edu</em>)
+            </p>
+        </header>
+
+        <main>
+            <h2>Proposition: Environmental Spending Helps Reduce Carbon Emissions</h2>
+
+            <!-- SECTION 1: FOR -->
+            <section>
+                <h3>FOR the Proposition</h3>
+
+                <figure>
+                    <!-- Export your page 1 charts as an image (e.g., images/proposition1.png) -->
+                    <img src="FOR_plot.png" />
+                    <figcaption>
+                        Countries where environmental protection spending increased
+                        as a percentage of GDP while production-based CO₂ emissions 
+                        decreased from 2007 to 2018. Only countries in the bottom-right 
+                        quadrant are shown.
+                    </figcaption>
+                </figure>
+
+                <p><strong>Design Decisions and Rationale:</strong></p>
+
+                <ul>
+                    <li>
+                        <strong>Cherry Picking</strong>
+                        <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> We filtered the dataset to show only countries where
+                        environmental protection spending increased while production-based 
+                        CO₂ emissions decreased. By excluding countries with other combinations 
+                        of spending and emissions changes, we created an favourable view of the 
+                        proposition without showing the full picture.
+                    </li>
+                    <li>
+                        <strong>Truncated Axis Ranges and Restricted Quadrant</strong>
+                        <span class="score score-deceptive">Score: -2.0 (Deceptive)</span><br>
+                        <em>Rationale:</em> We restricted the axes to display only positive 
+                        spending changes and negative emissions changes, focusing attention 
+                        exclusively on favorable outcomes. This prevents readers from comparing 
+                        these countries with those where emissions increased or environmental 
+                        spending decreased.
+                    </li>
+                    <li>
+                        <strong>Strategic Time-Window Selection (2007–2018)</strong>
+                        <span class="score score-deceptive">Score: -1.0 (Deceptive)</span><br>
+                        <em>Rationale:</em> We compared changes from 2007 to 2018 rather than 
+                        showing the full historical trend beginning in 1995. Shrinking the time
+                        frame window allowed us to make the countries appear to care more about 
+                        enviroment protection recently because since 1995 it is less of an overall 
+                        change for some countries.
+                    </li>
+                    <li>
+                        <strong>Headline Framing</strong>
+                        <span class="score score-deceptive">Score: -0.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> Our headline, "Higher Environmental Spending Coincided with Falling CO₂ Emissions," 
+                        frames the pattern among the selected countries. Although the word "coincided" describes an association 
+                        rather than explicitly claiming causation, the headline has no mention of the other countries
+                    </li>
+                    <li>
+                        <strong>Visual Emphasis with Color</strong>
+                        <span class="score score-deceptive">Score: -0.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> We used green points with green country labels to make the 
+                        selected countries stand out against the white background. Green is commonly associated 
+                        with success, reinforcing the positive message of the visualization. Combined with the 
+                        exclusion of countries that do not fit the pattern, these design choices make the 
+                        favorable results more visually prominent and may encourage readers to 
+                        interpret them as evidence of policy success.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SECTION 2: AGAINST -->
+            <section>
+                <h3>AGAINST the Proposition</h3>
+
+                <figure>
+                    <!-- Export your page 2 charts as an image (e.g., images/proposition2.png) -->
+                    <img src="against_spending_groups.png" />
+                    <figcaption>
+                        Total indexed emissions growth and geographic emission expansions (1995–2018).
+                    </figcaption>
+                </figure>
+
+                <p><strong>Design Decisions and Rationale:</strong></p>
+
+                <ul>
+                    <li>
+                        <strong>Binary Categorization of Environmental Spending</strong>
+                        <span class="score score-deceptive">Score: -0.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> The visualization separates countries into two groups based solely on whether environmental spending increased or remained flat/decreased, ignoring the magnitude of those changes. A country with a negligible spending increase is grouped alongside one with a substantial increase, oversimplifying the relationship between environmental investment and CO₂ reductions.
+                    </li>
+                    <li>
+                        <strong>Selective Emphasis on Proportion of Countries Reducing Emissions</strong>
+                        <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> The chart prominently highlights that 20 of 20 countries without spending increases reduced emissions, compared with only 12 of 17 countries that increased spending. This framing directs attention toward the proportion of countries achieving reductions rather than the magnitude of those reductions, making increased environmental spending appear less effective despite nearly identical median emissions changes of −12.2% and −11.2%.
+                    </li>
+                    <li>
+                        <strong>Selective Time Frame (2007–2018 Instead of 1995–2018)</strong>
+                        <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> We restricted the AGAINST visualization to 2007–2018 rather than the longer 1995–2018 period used in the FOR visualization. By focusing on a shorter, more recent period, we exclude earlier trends in environmental spending and CO₂ emissions that could provide a different perspective on their relationship. This selective time frame limits the ability to observe long-term effects of environmental investment and may exaggerate the apparent ineffectiveness of increased spending.
+                    </li>
+                    <li>
+                        <strong>Using Percentage of GDP Instead of Absolute Environmental Spending Score</strong>
+                        <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> We measured environmental protection spending as a percentage of GDP rather than in absolute monetary amounts. As a result, countries experiencing economic growth may be classified as decreasing environmental spending even when their actual expenditures increased. This potentially misrepresents environmental investment and strengthens the AGAINST argument by making emissions reductions appear achievable with less spending, when countries may actually be investing more money into environmental protection.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SECTION 3: FINAL REFLECTION -->
+            <section>
+                <h2>Final Reflection</h2>
+
+                <p>
+                    Throughout this project, exploring the relationship between environmental protection spending and CO₂ emissions revealed how strongly visualization choices dictate the reader's takeaways. Neither visualization fabricated false data points, both were computed strictly from the International Monetary Fund's (IMF) Climate Change Indicators database. Yet, depending on whether data was presented at an individual country level or aggregated as a global index, the narrative swung from successful environmental stewardship to total policy futility.
+                </p>
+                <p>
+                    What was most surprising was the ease with which earnest techniques (accurate bar lengths, labeled axes, clear titles) can be combined with deceptive aggregation and filtering to construct compelling opposing arguments. We define ethical visualization not merely as avoiding factual falsification, but as actively striving for proportional representation. When a subset of data is isolated to support a proposition, ethical visualizers should provide context regarding the overall distribution so readers are not misled by omission.
+                </p>
+            </section>
+
+            <div class="data-sources">
+                <strong>Data Sources:</strong>
+                <ul>
+                    <li><a href="https://data.imf.org/en/Data-Explorer?datasetUrn=IMF.STA:GENENVPROEXP(1.0.2)" target="_blank">IMF General Environmental Protection Expenditure</a></li>
+                    <li><a href="https://data.imf.org/en/datasets/IMF.STA:CO2E" target="_blank">IMF CO2 Emissions Embodied in Production and Final Demand</a></li>
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>
