@@ -182,7 +182,6 @@
                 <p><strong>Design Decisions and Rationale:</strong></p>
 
                 <ul>
-
                     <li>
                         <strong>Cherry Picking</strong>
                         <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
@@ -227,9 +226,7 @@
                         favorable results more visually prominent and may encourage readers to 
                         interpret them as evidence of policy success.
                     </li>
-                    
                 </ul>
-            </section>
             </section>
 
             <!-- SECTION 2: AGAINST -->
@@ -248,19 +245,24 @@
 
                 <ul>
                     <li>
-                        <strong>Aggregate Indexing Starting at 100 Baseline</strong>
-                        <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
-                        <em>Rationale:</em> In the line chart, we combined production-based CO₂ across all 67 countries into a single aggregate index relative to 1995 = 100. This single aggregate curve rose +57.4%, which completely conceals the genuine reductions achieved by over 25 individual nations by allowing massive emission growth in high-population developing nations to dominate the scale.
+                        <strong>Binary Categorization of Environmental Spending</strong>
+                        <span class="score score-deceptive">Score: -0.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> The visualization separates countries into two groups based solely on whether environmental spending increased or remained flat/decreased, ignoring the magnitude of those changes. A country with a negligible spending increase is grouped alongside one with a substantial increase, oversimplifying the relationship between environmental investment and CO₂ reductions.
                     </li>
                     <li>
-                        <strong>Filtering Exclusively for Developing Countries with Rising Emissions</strong>
+                        <strong>Selective Emphasis on Proportion of Countries Reducing Emissions</strong>
                         <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
-                        <em>Rationale:</em> In the horizontal bar chart, we highlighted countries where spending and emissions both increased (e.g., Myanmar, Kazakhstan, Chile, Argentina). Developing economies naturally produce more emissions as they industrialize, so presenting their spending as "ineffective" conflates developmental growth with policy failure.
+                        <em>Rationale:</em> The chart prominently highlights that 20 of 20 countries without spending increases reduced emissions, compared with only 12 of 17 countries that increased spending. This framing directs attention toward the proportion of countries achieving reductions rather than the magnitude of those reductions, making increased environmental spending appear less effective despite nearly identical median emissions changes of −12.2% and −11.2%.
                     </li>
                     <li>
-                        <strong>Choropleth Color Saturation Contrast (1995 vs 2018)</strong>
-                        <span class="score score-earnest">Score: +1.0 (Earnest)</span><br>
-                        <em>Rationale:</em> The side-by-side choropleth maps visualize absolute emission scales globally. Using high contrast and saturated dark reds for heavy emitters draws attention to how domestic reductions in Western nations are overshadowed by shifts in global industrial production.
+                        <strong>Selective Time Frame (2007–2018 Instead of 1995–2018)</strong>
+                        <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> We restricted the AGAINST visualization to 2007–2018 rather than the longer 1995–2018 period used in the FOR visualization. By focusing on a shorter, more recent period, we exclude earlier trends in environmental spending and CO₂ emissions that could provide a different perspective on their relationship. This selective time frame limits the ability to observe long-term effects of environmental investment and may exaggerate the apparent ineffectiveness of increased spending.
+                    </li>
+                    <li>
+                        <strong>Using Percentage of GDP Instead of Absolute Environmental Spending Score</strong>
+                        <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> We measured environmental protection spending as a percentage of GDP rather than in absolute monetary amounts. As a result, countries experiencing economic growth may be classified as decreasing environmental spending even when their actual expenditures increased. This potentially misrepresents environmental investment and strengthens the AGAINST argument by making emissions reductions appear achievable with less spending, when countries may actually be investing more money into environmental protection.
                     </li>
                 </ul>
             </section>
