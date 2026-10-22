@@ -182,22 +182,54 @@
                 <p><strong>Design Decisions and Rationale:</strong></p>
 
                 <ul>
+
                     <li>
-                        <strong>Cherry-Picking High-Performing European Nations</strong>
+                        <strong>Cherry Picking</strong>
                         <span class="score score-deceptive">Score: -1.5 (Deceptive)</span><br>
-                        <em>Rationale:</em> We isolated 12 nations (e.g., Romania, Sweden, UK, Bulgaria) that achieved steep reductions in production-based CO₂ while increasing environmental spending. By excluding countries where emissions rose in tandem with GDP and spending, this gives readers an overwhelming impression of widespread policy success.
+                        <em>Rationale:</em> We filtered the dataset to show only countries where
+                        environmental protection spending increased while production-based 
+                        CO₂ emissions decreased. By excluding countries with other combinations 
+                        of spending and emissions changes, we created an favourable view of the 
+                        proposition without showing the full picture.
                     </li>
                     <li>
-                        <strong>Strategic Time-Window Baseline Selection (2007 vs 1995)</strong>
+                        <strong>Truncated Axis Ranges and Restricted Quadrant</strong>
+                        <span class="score score-deceptive">Score: -2.0 (Deceptive)</span><br>
+                        <em>Rationale:</em> We restricted the axes to display only positive 
+                        spending changes and negative emissions changes, focusing attention 
+                        exclusively on favorable outcomes. This prevents readers from comparing 
+                        these countries with those where emissions increased or environmental 
+                        spending decreased.
+                    </li>
+                    <li>
+                        <strong>Strategic Time-Window Selection (2007–2018)</strong>
                         <span class="score score-deceptive">Score: -1.0 (Deceptive)</span><br>
-                        <em>Rationale:</em> Shifting the observational baseline to 2007 for the secondary chart allowed us to claim that "36 of 67 countries cut domestic emissions," capturing post-2008 global financial crisis emission dips that were largely macroeconomic rather than spending-driven.
+                        <em>Rationale:</em> We compared changes from 2007 to 2018 rather than 
+                        showing the full historical trend beginning in 1995. Shrinking the time
+                        frame window allowed us to make the countries appear to care more about 
+                        enviroment protection recently because since 1995 it is less of an overall 
+                        change for some countries.
                     </li>
                     <li>
-                        <strong>Prominent Headline Framing and Sorting by Magnitude</strong>
-                        <span class="score score-earnest">Score: +1.5 (Earnest)</span><br>
-                        <em>Rationale:</em> We sorted horizontal bars in descending order of percent reduction and annotated the highest reducer (-38.6% for Romania) directly in the chart title. This visually guides the eye quickly and reinforces readability without distorting the underlying bar lengths.
+                        <strong>Headline Framing</strong>
+                        <span class="score score-deceptive">Score: -0.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> Our headline, "Higher Environmental Spending Coincided with Falling CO₂ Emissions," 
+                        frames the pattern among the selected countries. Although the word "coincided" describes an association 
+                        rather than explicitly claiming causation, the headline has no mention of the other countries
                     </li>
+                    <li>
+                        <strong>Visual Emphasis with Color</strong>
+                        <span class="score score-deceptive">Score: -0.5 (Deceptive)</span><br>
+                        <em>Rationale:</em> We used green points with green country labels to make the 
+                        selected countries stand out against the white background. Green is commonly associated 
+                        with success, reinforcing the positive message of the visualization. Combined with the 
+                        exclusion of countries that do not fit the pattern, these design choices make the 
+                        favorable results more visually prominent and may encourage readers to 
+                        interpret them as evidence of policy success.
+                    </li>
+                    
                 </ul>
+            </section>
             </section>
 
             <!-- SECTION 2: AGAINST -->
